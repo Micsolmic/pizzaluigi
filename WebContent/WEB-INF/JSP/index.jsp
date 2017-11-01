@@ -19,7 +19,7 @@
 
 <hr>
 
- <script type="text/javascript>
+ <script type="text/javascript">
  
                alert("this script was added @ github");
                

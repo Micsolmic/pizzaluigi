@@ -14,6 +14,7 @@
 <label>Naam<input name='gebruikersnaam' value='${gebruikersnaam}'
 autofocus></label>
 <input type='submit' value='Onthoud me'>
+<div id="testingGit" ></div>
 </form>
 </body>
 </html>

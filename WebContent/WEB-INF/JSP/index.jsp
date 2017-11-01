@@ -22,7 +22,7 @@
  <script type="text/javascript">
  
 
-               alert("deze script werd toegevoegd in Eclipse");
+             alert("deze script werd toegevoegd in Eclipse");
 
                
  </script>

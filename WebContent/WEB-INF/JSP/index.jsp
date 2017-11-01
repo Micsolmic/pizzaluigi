@@ -21,7 +21,9 @@
 
  <script type="text/javascript">
  
-               alert("this script was toegevoegd in github");
+
+               alert("deze script werd toegevoegd in github");
+
                
  </script>
  

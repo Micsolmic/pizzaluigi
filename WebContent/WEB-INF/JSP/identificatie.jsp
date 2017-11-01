@@ -13,7 +13,10 @@
 <form method='post'>
 <label>Naam<input name='gebruikersnaam' value='${gebruikersnaam}'
 autofocus></label>
-<input type='submit' value='onthou mij iedereen'>
+
+
+<input type='submit' value='Suvenez moi tout le monde'>
+
 <div id="testingGit" ></div>
 </form>
 </body>

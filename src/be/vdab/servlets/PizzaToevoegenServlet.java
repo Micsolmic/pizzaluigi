@@ -24,7 +24,8 @@ import be.vdab.repositories.PizzaRepository;
 public class PizzaToevoegenServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/pizzatoevoegen.jsp";
-	private static final String REDIRECT_URL = "%s/pizzas";
+    private static final String REDIRECT_URL = "%s/pizzas";
+
 	private final PizzaRepository pizzaRepository = new PizzaRepository();
 
 	/**
@@ -74,10 +75,13 @@ public class PizzaToevoegenServlet extends HttpServlet {
 				fotoPart.write(String.format("%s/%d.jpg", pizzaFotosPad, pizza.getId()));
 			}
 			
-			response.sendRedirect(String.format(REDIRECT_URL, request.getContextPath()));
+			response.sendRedirect(response.encodeRedirectURL(String.format(REDIRECT_URL, request.getContextPath())));
 		} else {
 			request.setAttribute("fouten", fouten);
 			request.getRequestDispatcher(VIEW).forward(request, response);
+			
 		}
+		
+		
 	}
 }

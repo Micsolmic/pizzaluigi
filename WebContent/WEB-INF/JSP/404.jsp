@@ -10,7 +10,7 @@
 <body>
 <c:import url='/WEB-INF/JSP/menu.jsp'/>
 <h1>Pagina niet gevonden</h1>
-<img src='<c:url value="/images/fout.jpg"/>' alt='fout'>
+<img src='<c:url value="/img/fout.png"/>' alt='fout'>
 <p>De pagina die u zocht bestaat niet op onze website.</p>
 </body>
 </html>

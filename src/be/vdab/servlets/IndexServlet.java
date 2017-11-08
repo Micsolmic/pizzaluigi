@@ -1,6 +1,9 @@
 package be.vdab.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.servlet.ServletException;
@@ -23,13 +26,20 @@ public class IndexServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
+		Date nu = Calendar.getInstance().getTime();
+		
+		PrintWriter out = response.getWriter();
+		out.println(nu);
+		/*
+		request.setAttribute("nu", nu);
 		request.setAttribute("aantalKeerBekeken", aantalKeerBekeken.incrementAndGet());
 		request.setAttribute("emailWebMaster", this.getInitParameter("emailWebMaster"));
 		
 		
 		
 		request.getRequestDispatcher("/WEB-INF/JSP/index.jsp").forward(request, response);;
-		
+		*/
 	}
 
 

@@ -8,24 +8,22 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import be.vdab.entities.Saus;
 
+// enkele imports ...
 public class SausRepository {
-	
-	
-	
-	private static Map<Long, Saus> SAUZEN = new ConcurrentHashMap<>();
-	
-	
-	static {		
-		SAUZEN.put(51L, new Saus(51, "cocktail", Arrays.asList("ei, zout, tomaatextract")));
-		SAUZEN.put(52L, new Saus(52, "mayonnaise", Arrays.asList("ei, zout, mayo")));
-		SAUZEN.put(53L, new Saus(53, "mosterd", Arrays.asList("mosterd, zout, azijn")));		
-	}
-	
-	
-	public static List<Saus> findAll(){
-		
-		return new ArrayList<>(SAUZEN.values());		
-		
-	}
-
+private static final Map<Long, Saus> SAUZEN = new ConcurrentHashMap<>();
+static {
+SAUZEN.put(3L, new Saus(3, "cocktail",
+Arrays.asList("mayonaise", "ketchup", "cognac")));
+SAUZEN.put(6L, new Saus(6, "mayonaise",
+Arrays.asList("ei", "mosterd")));
+SAUZEN.put(7L, new Saus(7, "mosterd",
+Arrays.asList("mosterd", "azijn", "witte wijn")));
+SAUZEN.put(12L, new Saus(12, "tartare",
+Arrays.asList("mayonaise", "augurk", "tabasco")));
+SAUZEN.put(44L, new Saus(44, "vinaigrette",
+Arrays.asList("olijfolie", "mosterd", "azijn")));
+}
+public List<Saus> findAll() {
+return new ArrayList(SAUZEN.values());
+}
 }

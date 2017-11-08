@@ -35,7 +35,8 @@ request.getRequestDispatcher(VIEW).forward(request, response);
 @Override
 protected void doPost(HttpServletRequest request,
 HttpServletResponse response) throws ServletException, IOException {
-request.setCharacterEncoding("UTF-8");
+// is handled by filter
+// request.setCharacterEncoding("UTF-8");
 HttpSession session = request.getSession(); 
 session.setAttribute("gebruikersnaam", 
 request.getParameter("gebruikersnaam"));

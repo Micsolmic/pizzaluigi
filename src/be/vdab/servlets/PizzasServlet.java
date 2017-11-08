@@ -7,11 +7,13 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 import be.vdab.entities.Pizza;
 import be.vdab.repositories.PizzaRepository;
@@ -57,4 +59,8 @@ public class PizzasServlet extends HttpServlet {
 	 pizzaFotosPad = this.getServletContext().getRealPath("/pizzafotos"); 
 	}
 
+	@Resource(name = PizzaRepository.JNDI_NAME)
+	void setDataSource(DataSource dataSource) {
+		pizzaRepository.setDataSource(dataSource);
+	}
 }

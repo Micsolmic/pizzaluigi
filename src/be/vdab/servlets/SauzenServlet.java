@@ -26,7 +26,7 @@ public class SauzenServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	
-		List<Saus> lijst = SausRepository.findAll();		
+		List<Saus> lijst = new SausRepository().findAll();		
 		
 		request.setAttribute("sauzen", lijst);
 

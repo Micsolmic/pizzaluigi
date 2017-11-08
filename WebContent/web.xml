@@ -16,5 +16,9 @@
 <session-timeout>20</session-timeout> <!-- 20 minuten -->
 <tracking-mode>COOKIE</tracking-mode>
 </session-config>
+<error-page>
+<error-code>404</error-code>
+<location>/WEB-INF/JSP/404.jsp</location>
+</error-page>
   
 </web-app>
